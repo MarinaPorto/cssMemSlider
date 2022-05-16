@@ -1,0 +1,588 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+  max-width: 52em;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  padding-top: 2.5em;
+  display: flex;
+  gap: 1em;
+  position: relative;
+}
+
+.controller-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 12.5em;
+  z-index: 1000;
+  background-color: rgb(255, 255, 255);
+}
+
+.controller {
+  width: 1.87em;
+  height: 1.87em;
+  cursor: pointer;
+}
+
+.controller-inner {
+  width: 1.37em;
+  height: 1.37em;
+  background-color: rgb(95, 142, 184);
+  border-radius: 50%;
+}
+
+.controller:hover .controller-inner {
+  border: 2px solid rgb(22, 50, 75);
+}
+
+.controller-inner-active {
+  background-color: rgb(22, 50, 75);
+}
+
+.slider-img {
+  max-width: 100%;
+  margin-bottom: 2em;
+}
+
+@keyframes move-right-1 {
+  from {
+    left: -50.5em;
+  }
+  to {
+    left: 0em;
+  }
+}
+
+@keyframes move-right-2 {
+  from {
+    left: -102em;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes move-right-3 {
+  from {
+    left: -153.5em;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.transition-right-1 {
+  animation-name: move-right-1;
+  animation-duration: 2s;
+}
+.transition-right-1-left {
+  left: 0;
+}
+
+.transition-right-2 {
+  animation-name: move-right-2;
+  animation-duration: 2s;
+}
+
+.transition-right-3 {
+  animation-name: move-right-3;
+  animation-duration: 2s;
+}
+
+@keyframes move-right-2-3 {
+  from {
+    left: -102em;
+  }
+  to {
+    left: -50.5em;
+  }
+}
+
+@keyframes move-right-2-4 {
+  from {
+    left: -153.5em;
+  }
+  to {
+    left: -50.5em;
+  }
+}
+
+.transition-right-2-3 {
+  animation-name: move-right-2-3;
+  animation-duration: 2s;
+}
+.transition-right-2-4 {
+  animation-name: move-right-2-4;
+  animation-duration: 2s;
+}
+
+@keyframes move-right-3-1 {
+  from {
+    left: 0;
+  }
+  to {
+    left: -102em;
+  }
+}
+
+@keyframes move-right-3-4 {
+  from {
+    left: -153.5em;
+  }
+  to {
+    left: -102em;
+  }
+}
+
+.transition-right-3-1 {
+  animation-name: move-right-3-1;
+  animation-duration: 2s;
+}
+.transition-right-3-1-left {
+  left: -102em;
+}
+.transition-right-3-4 {
+  animation-name: move-right-3-4;
+  animation-duration: 2s;
+}
+
+@keyframes move-right-4-1 {
+  from {
+    left: -50.5em;
+  }
+  to {
+    left: -153.5em;
+  }
+}
+
+@keyframes move-right-4-0 {
+  from {
+    left: 0;
+  }
+  to {
+    left: -153.5em;
+  }
+}
+
+.transition-right-4-1 {
+  animation-name: move-right-4-1;
+  animation-duration: 2s;
+}
+.transition-right-4-0 {
+  animation-name: move-right-4-0;
+  animation-duration: 2s;
+}
+
+@keyframes move-left {
+  from {
+    left: -50.5em;
+  }
+  to {
+    left: 0em;
+  }
+}
+
+@keyframes move-right {
+  from {
+    left: 0em;
+  }
+  to {
+    left: -50.5em;
+  }
+}
+
+@keyframes move-right-104 {
+  from {
+    left: -50.5em;
+  }
+  to {
+    left: -102em;
+  }
+}
+
+@keyframes move-right-156 {
+  from {
+    left: -102em;
+  }
+  to {
+    left: -153.5em;
+  }
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 2s;
+}
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 2s;
+  left: -50.5em;
+}
+.transition-right-left {
+  left: -50.5em;
+}
+.transition-right-104 {
+  animation-name: move-right-104;
+  animation-duration: 2s;
+}
+.transition-right-104-left {
+  left: -102em;
+}
+.transition-right-156 {
+  animation-name: move-right-156;
+  animation-duration: 2s;
+}
+.transition-right-156-left {
+  left: -153.5em;
+}
+
+@keyframes move-left-text {
+  from {
+    left: -22em;
+  }
+  to {
+    left: 0em;
+  }
+}
+
+@keyframes move-right-text-25 {
+  from {
+    left: 0em;
+  }
+  to {
+    left: -22em;
+  }
+}
+
+@keyframes move-right-text-50 {
+  from {
+    left: -22em;
+  }
+  to {
+    left: -44em;
+  }
+}
+
+@keyframes move-right-text-75 {
+  from {
+    left: -44em;
+  }
+  to {
+    left: -66em;
+  }
+}
+
+.transition-left-text {
+  animation-name: move-left-text;
+  animation-duration: 2s;
+}
+.transition-right-text-25 {
+  animation-name: move-right-text-25;
+  animation-duration: 2s;
+}
+.transition-right-text-50 {
+  animation-name: move-right-text-50;
+  animation-duration: 2s;
+}
+.transition-right-text-75 {
+  animation-name: move-right-text-75;
+  animation-duration: 2s;
+}
+
+@keyframes move-left-text {
+  from {
+    left: -22em;
+  }
+  to {
+    left: 0em;
+  }
+}
+
+@keyframes move-left-text-3-2 {
+  from {
+    left: -44em;
+  }
+  to {
+    left: -22em;
+  }
+}
+
+@keyframes move-left-text-2-3 {
+  from {
+    left: -66em;
+  }
+  to {
+    left: -44em;
+  }
+}
+
+@keyframes move-left-text-1-3 {
+  from {
+    left: -66em;
+  }
+  to {
+    left: -22em;
+  }
+}
+
+.transition-left-text {
+  animation-name: move-left-text;
+  animation-duration: 2s;
+}
+.transition-move-left-text-3-2 {
+  animation-name: move-left-text-3-2;
+  animation-duration: 2s;
+}
+.transition-move-left-text-2-3 {
+  animation-name: move-left-text-2-3;
+  animation-duration: 2s;
+}
+.transition-move-left-text-1-3 {
+  animation-name: move-left-text-1-3;
+  animation-duration: 2s;
+}
+
+.slider-element-wrapper {
+  display: flex;
+}
+
+.slider-text-wrapper {
+  display: flex;
+  width: 22em;
+}
+
+.slider-text {
+  width: 22em;
+  visibility: hidden;
+}
+
+.slider-text-t {
+  display: block;
+  width: 22em;
+}
+
+.text-contr-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-text-wrapper-animation {
+  position: relative;
+}
+
+@keyframes move-opacity {
+  from {
+    left: -50em;
+  }
+  to {
+    left: -75em;
+  }
+}
+
+.transition-left-text {
+  animation-name: move-left-text;
+  animation-duration: 2s;
+}
+
+.tooltip1 {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s linear 0.3s;
+}
+
+.tooltip {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+@media (max-width: 590px) {
+  .text-contr-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slider-text-wrapper {
+    width: 35em;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 568px) {
+  .text-contr-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .controller-wrapper {
+    order: -1;
+    margin-bottom: 10px;
+  }
+
+  .slider-text-wrapper {
+    text-align: center;
+    width: 22em;
+    margin-bottom: 10px;
+  }
+  .slider-text-t {
+    display: block;
+    width: 22em;
+  }
+  .slider-text {
+    width: 22em;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    max-width: 22.5em;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  @keyframes move-right-1 {
+    from {
+      left: -21.5em;
+    }
+    to {
+      left: 0em;
+    }
+  }
+
+  @keyframes move-right-2 {
+    from {
+      left: -43em;
+    }
+    to {
+      left: 0;
+    }
+  }
+
+  @keyframes move-right-3 {
+    from {
+      left: -64.5em;
+    }
+    to {
+      left: 0;
+    }
+  }
+  @keyframes move-right-2-3 {
+    from {
+      left: -64.5em;
+    }
+    to {
+      left: -21.5em;
+    }
+  }
+
+  @keyframes move-right-2-4 {
+    from {
+      left: -64.5em;
+    }
+    to {
+      left: -21.5em;
+    }
+  }
+
+  @keyframes move-right-3-1 {
+    from {
+      left: 0;
+    }
+    to {
+      left: -43em;
+    }
+  }
+
+  @keyframes move-right-3-4 {
+    from {
+      left: -64.5em;
+    }
+    to {
+      left: -43em;
+    }
+  }
+
+  @keyframes move-right-4-1 {
+    from {
+      left: -21.5em;
+    }
+    to {
+      left: -64.5em;
+    }
+  }
+
+  @keyframes move-right-4-0 {
+    from {
+      left: 0;
+    }
+    to {
+      left: -64.5em;
+    }
+  }
+
+  .transition-right-3-1-left {
+    left: -43em;
+  }
+
+  @keyframes move-left {
+    from {
+      left: -21.5em;
+    }
+    to {
+      left: 0em;
+    }
+  }
+
+  @keyframes move-right {
+    from {
+      left: 0em;
+    }
+    to {
+      left: -21.5em;
+    }
+  }
+
+  @keyframes move-right-104 {
+    from {
+      left: -21.5em;
+    }
+    to {
+      left: -43em;
+    }
+  }
+
+  @keyframes move-right-156 {
+    from {
+      left: -43em;
+    }
+    to {
+      left: -64.5em;
+    }
+  }
+
+  .transition-right-left {
+    left: -21.5em;
+  }
+
+  .transition-right-104-left {
+    left: -43em;
+  }
+
+  .transition-right-156-left {
+    left: -64.5em;
+  }
+
+  .controller-wrapper {
+    order: -1;
+  }
+}
