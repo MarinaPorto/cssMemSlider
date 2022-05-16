@@ -145,13 +145,15 @@ controllersBtns.forEach((el, index) => {
     else if (index == 1 && indexOfPreviewSlide == 2) {
       sliderWrapper.classList.add('transition-right-2-3')
       sliderWrapper.classList.add('transition-right-left')
-      sliderTextWrapperAnimation.classList.add('transition-right-text-25')
+      // sliderTextWrapperAnimation.classList.add('transition-right-text-25')
+      sliderTextWrapperAnimation.classList.add('transition-move-left-text-3-2')
       // sliderWrapper.style.left = '-50.5em'
       sliderTextWrapperAnimation.style.left = '-22em'
     } else if (index == 1 && indexOfPreviewSlide == 3) {
       sliderWrapper.classList.add('transition-right-2-4')
       sliderWrapper.classList.add('transition-right-left')
-      sliderTextWrapperAnimation.classList.add('transition-right-text-25')
+      // sliderTextWrapperAnimation.classList.add('transition-right-text-25')
+      sliderTextWrapperAnimation.classList.add('transition-move-left-text-1-3')
       // sliderWrapper.style.left = '-50.5em'
       sliderTextWrapperAnimation.style.left = '-22em'
     } else if (index == 2 && indexOfPreviewSlide == 1) {
@@ -170,7 +172,8 @@ controllersBtns.forEach((el, index) => {
     } else if (index == 2 && indexOfPreviewSlide == 3) {
       sliderWrapper.classList.add('transition-right-3-4')
       sliderWrapper.classList.add('transition-right-104-left')
-      sliderTextWrapperAnimation.classList.add('transition-right-text-50')
+      // sliderTextWrapperAnimation.classList.add('transition-right-text-50')
+      sliderTextWrapperAnimation.classList.add('transition-move-left-text-2-3')
       // sliderWrapper.style.left = '-102em'
       sliderTextWrapperAnimation.style.left = '-44em'
     }
@@ -228,5 +231,8 @@ sliderTextWrapperAnimation.addEventListener('animationend', () => {
   sliderTextWrapperAnimation.classList.remove('transition-right-text-25')
   sliderTextWrapperAnimation.classList.remove('transition-right-text-50')
   sliderTextWrapperAnimation.classList.remove('transition-right-text-75')
+  sliderTextWrapperAnimation.classList.remove('transition-move-left-text-3-2')
+  sliderTextWrapperAnimation.classList.remove('transition-move-left-text-2-3')
+  sliderTextWrapperAnimation.classList.remove('transition-move-left-text-1-3')
 })
 
